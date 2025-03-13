@@ -1,0 +1,31 @@
+[gd_scene load_steps=4 format=3 uid="uid://g42rh0lxakh8"]
+
+[ext_resource type="Script" uid="uid://t7mom2c5kw3h" path="res://Interactable/gun_pickup.gd" id="1_yvnxs"]
+[ext_resource type="Texture2D" uid="uid://bka3lhqsm7bmc" path="res://Asset PNG/Gun/Gun.png" id="2_yvnxs"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_yvnxs"]
+radius = 32.0
+
+[node name="GunPickup" type="Area2D"]
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("1_yvnxs")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(2, 2)
+texture = ExtResource("2_yvnxs")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_yvnxs")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+[node name="HoverEffect" type="CPUParticles2D" parent="."]
+amount = 16
+emission_shape = 1
+emission_sphere_radius = 20.0
+gravity = Vector2(0, -20)
+scale_amount_min = 2.0
+scale_amount_max = 4.0
+color = Color(1, 0.921569, 0.631373, 1)

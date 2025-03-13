@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bfltkgsdlwmuy"
+path="res://.godot/imported/10. Dracula's Castle (Arranged by Akira Yamaoka) 1.mp3-e2b64f7b10749a085ce08be19a5b0648.mp3str"
+
+[deps]
+
+source_file="res://Audio/10. Dracula's Castle (Arranged by Akira Yamaoka) 1.mp3"
+dest_files=["res://.godot/imported/10. Dracula's Castle (Arranged by Akira Yamaoka) 1.mp3-e2b64f7b10749a085ce08be19a5b0648.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://bhoqu1cr2hcu7"]
+
+[sub_resource type="GDScript" id="GDScript_kya76"]
+script/source = "extends Area2D
+
+@export var interact_name: String = \"\"
+@export var is_interactable: bool = true
+
+var interact: Callable = func():
+	pass
+"
+
+[node name="Interactable" type="Area2D"]
+collision_layer = 2
+collision_mask = 0
+script = SubResource("GDScript_kya76")

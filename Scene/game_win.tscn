@@ -1,0 +1,72 @@
+[gd_scene load_steps=6 format=3 uid="uid://cbpsxn2ams2qh"]
+
+[ext_resource type="Texture2D" uid="uid://b642me5ahidj4" path="res://Asset PNG/Menu/Robot Alone.jpeg" id="1_2h4j8"]
+[ext_resource type="Script" uid="uid://dxnjqq0mf2kiu" path="res://Scene/game_win.gd" id="1_phhkg"]
+[ext_resource type="FontFile" uid="uid://df6yqynnfwy4m" path="res://Asset PNG/Menu/defused.ttf" id="3_h34gi"]
+[ext_resource type="AudioStream" uid="uid://cry3byr2ssq8q" path="res://Audio/Alone.mp3" id="4_d6k10"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_phhkg"]
+texture = ExtResource("1_2h4j8")
+
+[node name="Game Win" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_phhkg")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_phhkg")
+
+[node name="Exit" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -18.5
+offset_top = -15.5
+offset_right = 18.5
+offset_bottom = 15.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_h34gi")
+theme_override_font_sizes/font_size = 50
+text = "Exit"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -34.5
+offset_top = -189.0
+offset_right = 34.5
+offset_bottom = -166.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_h34gi")
+theme_override_font_sizes/font_size = 60
+text = "Its up to me to put
+the pieces back together"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_d6k10")
+autoplay = true
+parameters/looping = true
+
+[connection signal="pressed" from="Exit" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Exit" to="." method="_on_exit_pressed"]

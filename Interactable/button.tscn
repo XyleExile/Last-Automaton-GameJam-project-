@@ -1,0 +1,28 @@
+[gd_scene load_steps=6 format=3 uid="uid://bkegxn2mvbmo3"]
+
+[ext_resource type="Texture2D" uid="uid://bt7vpv600j0nm" path="res://Asset PNG/Useful Assets/button_large_spritesheet.png" id="1_24vbk"]
+[ext_resource type="Script" uid="uid://kh4c26hq6p0b" path="res://Interactable/button.gd" id="1_vq66f"]
+[ext_resource type="PackedScene" uid="uid://bhoqu1cr2hcu7" path="res://Interactable/interactable.tscn" id="2_n8m82"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_24vbk"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_n8m82"]
+radius = 17.0
+
+[node name="Button" type="StaticBody2D"]
+script = ExtResource("1_vq66f")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_24vbk")
+hframes = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(0.720002, 0.76)
+shape = SubResource("RectangleShape2D_24vbk")
+
+[node name="Interactable" parent="." instance=ExtResource("2_n8m82")]
+interact_name = "Press Button"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interactable"]
+scale = Vector2(2, 2)
+shape = SubResource("CircleShape2D_n8m82")
